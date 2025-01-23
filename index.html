@@ -1,648 +1,529 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta content="Web Design Agency specialized in Website Creation" name="description">
+<meta content="creation, sites, site, agency, advanced, advance, web, design" name="keywords">
+<meta content="Samuel Giordano (samuelgiordano@live.com)" name="author">
+<title>Advanced Agency</title>
+<link href="images/icons/icon.ico" rel="icon" type="image/icon">
+<link href="css/layout.css" rel="stylesheet">
+<link href="css/imagebox.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/scroll_to.js"></script>
+<script src="js/scroller.js"></script>
+<script src="js/scrollpane.js"></script>
+<script src="js/imagebox.js"></script>
+<script src="js/cufon.js"></script>
+<script src="js/delicious_font.js"></script>
+<script>
+    Cufon.replace("h1, h2, p, label")
+</script>
+<script src="js/form.js"></script>
+<script>
+    function showRequest(e, t, s) {
+        $.param(e);
+        return !0
+    }
 
-	<head>
-	
-		<meta charset="UTF-8" />
-		<meta name="description" content="Agência de Web Design especializada em Criação de Sites‎" />
-		<meta name="keywords" content="criação, criacao, sites, site, agencia, agência, advanced, advance, web, design‎" />
-		<meta name="author" content="Samuel Giordano (samuelgiordano@live.com)" />
-		
-		<title>Ag&ecirc;ncia Advanced</title>
+    function showResponse(e, t) {
+    }
 
-		<link rel="icon" type="image/icon" href="images/icons/icon.ico" /><!-- ÍCONE DO SITE -->
-		<link rel="stylesheet" href="css/layout.css" type="text/css" /><!-- CSS -->
-		<link rel="stylesheet" href="css/imagebox.css" type="text/css" /><!-- CAIXA DAS IMAGENS -->
-		
-		<script type="text/javascript" src="js/jquery.js"></script><!-- BIBLIOTECA JQUERY -->
-		<script type="text/javascript" src="js/scroll_to.js"></script><!-- PLUGIN "SCROLL TO" -->
-		<script type="text/javascript" src="js/scroller.js"></script><!-- ROLAGEM -->
-		<script type="text/javascript" src="js/scrollpane.js"></script><!-- PAINEL DE ROLAGEM INTERNO -->
-		<script type="text/javascript" src="js/imagebox.js"></script><!-- CAIXA DAS IMAGENS -->
-		<script type="text/javascript" src="js/cufon.js"></script><!-- PLUGIN "CUFON" -->
-		<script type="text/javascript" src="js/delicious_font.js"></script><!-- FONTE "DELICIOUS" -->
-		<script type="text/javascript">
-			Cufon.replace('h1, h2, p, label');
-		</script>
-		<script type="text/javascript" src="js/form.js"></script><!-- PLUGIN "CONTACT FORM" -->
-		<script type="text/javascript">	/* Formulário de contato */
-		$(document).ready(function() { 
-		var options = { 
-		target:        '#alert',
-		beforeSubmit:  showRequest,
-		success:       showResponse
-		}; 
-		$('#contactForm').ajaxForm(options); 
-		}); 
-		function showRequest(formData, jqForm, options) { 
-		var queryString = $.param(formData); 
-		return true; 
-		} 
-		function showResponse(responseText, statusText)  {  
-		} 
-		$.fn.clearForm = function() {
-		  return this.each(function() {
-			var type = this.type, tag = this.tagName.toLowerCase();
-			if (tag == 'form')
-			  return $(':input',this).clearForm();
-			if (type == 'text' || type == 'password' || tag == 'textarea')
-			  this.value = '';
-			else if (type == 'checkbox' || type == 'radio')
-			  this.checked = false;
-			else if (tag == 'select')
-			  this.selectedIndex = -1;
-		  });
-		};
-		</script>
-		
-	</head>
-	
-	<body>
-	
-		<div id="header"><!-- COMEÇO DO CABEÇALHO -->
-
-			<div id="header_box"><!-- COMEÇO DO CONTAINER DO CABEÇALHO -->
-			
-				<div id="logo"></div><!-- CONTAINER DO LOGO -->
-
-				<ul id="menu"><!-- COMEÇO DO MENU -->
-					<li><a href="#section1" class="panel">Home</a></li>
-					<li><a href="#section2" class="panel">Quem Somos</a></li>
-					<li><a href="#section3" class="panel">Servi&ccedil;os</a></li>
-					<li><a href="#" class="panel submenu">Portf&oacute;lios</a>
-						<ul>
-							<li><a href="#section4a" class="panel">Julio</a></li>
-							<li><a href="#section4b" class="panel">Samuel</a></li>
-							<li><a href="#section4c" class="panel">Vantuir</a></li>
-							<li><a href="#section4d" class="panel">Weber</a></li>
-							<li><a href="#section4e" class="panel">Wellington</a></li>
-						</ul>
-					</li>
-					<li><a href="#section5" class="panel">Contato</a></li>
-				</ul><!-- FIM DO MENU-->
-
-			</div><!-- FIM DO CONTAINER DO CABEÇALHO -->
-
-		</div><!-- FIM DO CABEÇALHO -->
-		
-		<div id="wrapper"><!-- COMEÇO DA CAPA -->
-		
-			<div id="mask"><!-- COMEÇO DA MÁSCARA -->
-			
-				<div id="section1" class="item"><!-- COMEÇO DA SESSÃO 1 -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class='grid_820'>
-							
-								<h1>Ol&aacute;, somos a Ag&ecirc;ncia Advanced. Seja bem vindo ao nosso site!</h1>
-								<img src="images/fotos/fotos.png" alt="" />
-								<h1>Vamos <a href="#section2" class="panel">avançar</a>!</h1>
-								
-							</div>
-							
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-				
-				</div><!-- FIM DA SESSÃO 1 -->
-				
-				<div id="section2" class="item"><!-- COMEÇO DA SESSÃO 2 -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class='grid_820'>
-								
-								<h1>Sobre n&oacute;s</h1>
-								<h2>Criada em abril de 2013 com intuito acad&ecirc;mico, nossa ag&ecirc;ncia &eacute; composta por cinco alunos do curso de Inform&aacute;tica para Internet do Instituto T&eacute;cnico de Barueri.</h2>
-								<h2>Estamos nos especializando em cria&ccedil;&atilde;o de sites. Gostamos de criar sites &uacute;nicos, completos e apropriados de todas as formas e tamanhos.</h2>
-								<h2>Aqui no site voc&ecirc; pode encontrar alguns de nossos <a href="#section3" class="panel">servi&ccedil;os</a> como grupo e nossos respectivos portf&oacute;lios com informa&ccedil;&otilde;es e trabalhos individuais.</h2>
-								<h2>Gostou de nosso trabalho? <a href="#section5" class="panel">Entre em contato</a> para discutir seus projetos.</h2>
-								
-							</div>
-							
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 2 -->
-
-				<div id="section3" class="item"><!-- COMEÇO DA SESSÃO 3 -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class='grid_820'>
-								<h1>Servi&ccedil;os</h1>
-								<h2>Seguem-se os links e algumas imagens de nossos sites acadêmicos como grupo:</h2>
-								<p class="work_title"><span class="title_left"><a href="http://www.hometheaterphilips.net76.net" target="_blank">Hotsite Homer Theather Philips</a></span><span class="title_right"><a href="http://www.marcenariaeskalla.com.br" target="_blank">Site Marcenaria Eskalla</a></span></p>
-							</div>
-							
-							<div id="hotsite" class='grid_260'>
-								<a class="example2" title="Home" href="images/portfolio/hotsite1.jpg"><img src="images/portfolio/hotsite1thumb.jpg" alt="Home Theater Philips - Página 1" class="portfolio260" /></a>
-								<a class="example2" title="Animação" href="images/portfolio/hotsite2.jpg"><img src="images/portfolio/hotsite2thumb.jpg" alt="Home Theater Philips - Página 2" class="portfolio260" /></a>
-							</div>
-							
-							<div id="marcenaria" class='grid_260'>
-								<a class="example2" title="Home" href="images/portfolio/eskalla1.jpg"><img src="images/portfolio/eskalla1thumb.jpg" alt="" class="portfolio260" /></a>
-								<a class="example2" title="Quem Somos" href="images/portfolio/eskalla2.jpg"><img src="images/portfolio/eskalla2thumb.jpg" alt="" class="portfolio260" /></a>
-							</div>
-							
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 3 -->
-
-				<div id="section4a" class="item"><!-- COMEÇO DA SESSÃO 4A -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class="grid_820">
-							
-								<h1>Julio</h1>
-							
-							</div>
-
-							<div class='grid_820'>
-								
-								<ul class="tabs1">
-									<li><a href="#tab1">Currículo</a></li>
-									<li><a href="#tab2">Trabalhos</a></li>
-								</ul>
-								
-							</div>
-
-							<div class='tab_container'>
-								
-								<div id="tab1" class="tab_content1">
-								
-									<h2>
-										<img class="pic" alt="" src="images/fotos/julio.jpg" /><span class="information">Julio Rodrigues Caetano, Estudante, 16 anos<br />Reside em Pirapora do Bom Jesus<br />Telefone: <a href="callto:+551141315418">11 41315418</a><br />E-mail: <a href="mailto:julio_caetano01@hotmail.com">julio_caetano01@hotmail.com</a></span>
-									</h2>
-									<h2 class="clean">Habilidades com computador:
-										<ul class="top_list">
-											<li>Adobe Master Collection CS6 (Intermedi&aacute;rio)</li>
-											<li>HTML (Intermedi&aacute;rio)</li>
-											<li>CSS (Intermedi&aacute;rio)</li>
-											<li>L&oacute;gica de Programa&ccedil;&atilde;o aplicada em C# (Intermedi&aacute;rio)</li>
-										</ul>
-										Experi&ecirc;ncia e Educa&ccedil;&atilde;o:
-										<ul class="top_list">
-											<li>Cursando 3º ano do Ensino M&eacute;dio</li>
-											<li>Fev. de 2013 a atualmente - T&eacute;cnico em Inform&aacute;tica p/ Internet em ITB Prof.ª Maria Sylvia Chaluppe Mello</li>
-										</ul>
-									</h2>
-									
-								
-								</div>
-								
-								<div id="tab2" class="tab_content1">
-
-									<div class='grid_820'>
-										<p class="work_title"><span class="title1"><a href="#" target="_blank">Site Copa das Confedera&ccedil;&otilde;es FIFA Brasil 2013</a></span></p>
-									</div>
-							
-									<div class='grid_260'>
-										<a class="example2" title="Estádios" href="images/portfolio/julio1.jpg"><img src="images/portfolio/julio1thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Equipes" href="images/portfolio/julio2.jpg"><img src="images/portfolio/julio2thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-									
-									<div class='grid_260'>		
-										<a class="example2" title="Cidade-sedes" href="images/portfolio/julio3.jpg"><img src="images/portfolio/julio3thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Grupos" href="images/portfolio/julio4.jpg"><img src="images/portfolio/julio4thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-									<div class='grid_260'>		
-										<a class="example2" title="Belo Horizonte" href="images/portfolio/julio5.jpg"><img src="images/portfolio/julio5thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Mineirão" href="images/portfolio/julio6.jpg"><img src="images/portfolio/julio6thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-								</div>
-							
-							</div>
-						
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 4A -->
-				
-				<div id="section4b" class="item"><!-- COMEÇO DA SESSÃO 4B -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class="grid_820">
-							
-								<h1>Samuel</h1>
-							
-							</div>
-
-							<div class='grid_820'>
-								
-								<ul class="tabs2">
-									<li><a href="#tab3">Currículo</a></li>
-									<li><a href="#tab4">Trabalhos</a></li>
-								</ul>
-								
-							</div>
-
-							<div class='tab_container'>
-								
-								<div id="tab3" class="tab_content2">
-								
-									<h2>
-										<img class="pic" alt="" src="images/fotos/samuel.jpg" /><span class="information">Samuel Giordano Bortolatto Britto, Estudante, 18 anos<br />Reside em Itapevi<br />Telefone: <a href="callto:+551138690211">11 3869-0211</a><br />E-mail: <a href="mailto:samuelgiordano@live.com">samuelgiordano@live.com</a></span>
-									</h2>
-									<h2 class="clean">Habilidades com computador:
-										<ul class="top_list">
-											<li>Adobe Master Collection CS6 (Intermedi&aacute;rio)</li>
-											<li>HTML (Intermedi&aacute;rio)</li>
-											<li>CSS (Intermedi&aacute;rio)</li>
-											<li>L&oacute;gica de Programa&ccedil;&atilde;o aplicada em C# (Intermedi&aacute;rio)</li>
-											<li>Micosoft Office (Intermedi&aacute;rio)</li>
-										</ul>
-										Experi&ecirc;ncia e Educa&ccedil;&atilde;o:
-										<ul class="top_list">
-											<li>2007 a 2011	- Designer Digital em Britto Carrera Photo & Video</li>
-											<li>2012 - Conclus&atilde;o do Ensino M&eacute;dio</li>
-											<li>Fev. de 2013 a atualmente - T&eacute;cnico em Inform&aacute;tica p/ Internet em ITB Prof.ª Maria Sylvia Chaluppe Mello</li>
-										</ul>
-									</h2>
-								
-								</div>
-								
-								<div id="tab4" class="tab_content2">
-								
-									<div class='grid_820'>
-										<p class="work_title"><span class="title1"><a href="http://www.confederationscup.hostei.com" target="_blank">Site Copa das Confedera&ccedil;&otilde;es FIFA Brasil 2013</a></span></p>
-									</div>
-							
-									<div class='grid_260'>
-										<a class="example2" title="Home" href="images/portfolio/samuel1.jpg"><img src="images/portfolio/samuel1thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Seleção Brasileira de Futebol" href="images/portfolio/samuel2.jpg"><img src="images/portfolio/samuel2thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-									
-									<div class='grid_260'>		
-										<a class="example2" title="Grupos" href="images/portfolio/samuel3.jpg"><img src="images/portfolio/samuel3thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Cidade-sedes" href="images/portfolio/samuel4.jpg"><img src="images/portfolio/samuel4thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-									<div class='grid_260'>		
-										<a class="example2" title="Brasília" href="images/portfolio/samuel5.jpg"><img src="images/portfolio/samuel5thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Maracanã" href="images/portfolio/samuel6.jpg"><img src="images/portfolio/samuel6thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-								</div>
-							
-							</div>
-						
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 4B -->
-				
-				<div id="section4c" class="item"><!-- COMEÇO DA SESSÃO 4C -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class="grid_820">
-							
-								<h1>Vantuir</h1>
-							
-							</div>
-
-							<div class='grid_820'>
-								
-								<ul class="tabs3">
-									<li><a href="#tab5">Currículo</a></li>
-									<li><a href="#tab6">Trabalhos</a></li>
-								</ul>
-								
-							</div>
-
-							<div class='tab_container'>
-								
-								<div id="tab5" class="tab_content3">
-								
-									<h2>
-										<img class="pic" alt="" src="images/fotos/vantuir.jpg" /><span class="information">Vantuir Alves Calado, Auxiliar Administrativo, 30 anos<br />Reside em Jandira<br />Telefones: <a href="callto:+5511996008140">11 996008140</a> &nbsp;&nbsp;<a href="callto:+551147074588">11 47074588</a><br />E-mail: <a href="mailto:vantuirdesigner@gmail.com">vantuirdesigner@gmail.com</a></span>
-									</h2>
-									<h2 class="clean">Habilidades com computador:
-										<ul class="top_list">
-											<li>Adobe Master Collection CS6 (Intermediário)</li>
-											<li>HTML (Intermediário)</li>
-											<li>CSS (Intermediário)</li>
-											<li>Micosoft Office (Intermediário)</li>
-										</ul>
-										Experi&ecirc;ncia e Educa&ccedil;&atilde;o:
-										<ul class="top_list">
-											<li>2005 - Montagem e Manuten&ccedil;&atilde;o de Micros</li>
-											<li>Fev. de 2013 a atualmente - T&eacute;cnico em Inform&aacute;tica p/ Internet em ITB Prof.ª Maria Sylvia Chaluppe Mello</li>
-										</ul>
-									</h2>
-								
-								</div>
-								
-								<div id="tab6" class="tab_content3">
-
-									<div class='grid_820'>
-										<p class="work_title"><span class="title_left_van"><a href="http://www.copaconfederacoes.p.ht" target="_blank">Site Copa das Confedera&ccedil;&otilde;es FIFA Brasil 2013</a></span><span class="title_right_van"><a href="http://www.picollypizzaseesfihas.com.br" target="_blank">Site Pizzaria Picolly</a></span></p>
-									</div>
-									
-									<div class='grid_260'>
-										<a class="example2" title="Home" href="images/portfolio/vantuir1.jpg"><img src="images/portfolio/vantuir1thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Seleção Braileira de Futebol" href="images/portfolio/vantuir2.jpg"><img src="images/portfolio/vantuir2thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-									
-									<div class='grid_260'>		
-										<a class="example2" title="Home" href="images/portfolio/vantuir3.jpg"><img src="images/portfolio/vantuir3thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="A Casa" href="images/portfolio/vantuir4.jpg"><img src="images/portfolio/vantuir4thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-									<div class='grid_260'>		
-										<a class="example2" title="Contato" href="images/portfolio/vantuir5.jpg"><img src="images/portfolio/vantuir5thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Cardápio" href="images/portfolio/vantuir6.jpg"><img src="images/portfolio/vantuir6thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-								</div>
-							
-							</div>
-						
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 4C -->
-				
-				<div id="section4d" class="item"><!-- COMEÇO DA SESSÃO 4D -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class="grid_820">
-							
-								<h1>Weber</h1>
-							
-							</div>
-
-							<div class='grid_820'>
-								
-								<ul class="tabs4">
-									<li><a href="#tab7">Currículo</a></li>
-									<li><a href="#tab8">Trabalhos</a></li>
-								</ul>
-								
-							</div>
-
-							<div class='tab_container'>
-								
-								<div id="tab7" class="tab_content4">
-								
-									<h2>
-										<img class="pic" alt="" src="images/fotos/weber.jpg" /><span class="information">Weber Alex Cardoso Leite, Estudante, 16 anos<br />Reside em Barueri<br />Telefones: <a href="callto:+5511949018485" target="_blank">11 949018485</a> &nbsp;&nbsp;<a href="callto:+551141633815" target="_blank">11 41633815</a><br />E-mail: <a href="mailto:wbrale@hotmail.com" target="_blank">wbrale@hotmail.com</a></span>
-									</h2>
-									<h2 class="clean">Habilidades com computador:
-										<ul class="top_list">
-											<li>Adobe Master Collection CS6 (B&aacute;sico)</li>
-											<li>HTML (B&aacute;sico)</li>
-											<li>CSS (B&aacute;sico)</li>
-										</ul>
-										Experi&ecirc;ncia e Educa&ccedil;&atilde;o:
-										<ul class="top_list">
-											<li>Cursando 2º ano do Ensino M&eacute;dio</li>
-											<li>Fev. de 2013 a atualmente - T&eacute;cnico em Inform&aacute;tica p/ Internet em ITB Prof.ª Maria Sylvia Chaluppe Mello</li>
-										</ul>
-									</h2>
-								
-								</div>
-								
-								<div id="tab8" class="tab_content4">
-
-									<div class='grid_820'>
-										<p class="work_title"><span class="title1"><a href="http://www.copadasconfederacao2013.netau.net" target="_blank">Site Copa das Confedera&ccedil;&otilde;es FIFA Brasil 2013</a></span></p>
-									</div>
-							
-									<div class='grid_260'>
-										<a class="example2" title="Segunda Etapa" href="images/portfolio/weber1.jpg"><img src="images/portfolio/weber1thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Grupos" href="images/portfolio/weber2.jpg"><img src="images/portfolio/weber2thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-									
-									<div class='grid_260'>		
-										<a class="example2" title="Seleção Espanhola de Futebol" href="images/portfolio/weber3.jpg"><img src="images/portfolio/weber3thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Equipes" href="images/portfolio/weber4.jpg"><img src="images/portfolio/weber4thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-									<div class='grid_260'>		
-										<a class="example2" title="Cidades-sede" href="images/portfolio/weber5.jpg"><img src="images/portfolio/weber5thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="País-sede" href="images/portfolio/weber6.jpg"><img src="images/portfolio/weber6thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-								</div>
-							
-							</div>
-						
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 4D -->
-				
-				<div id="section4e" class="item"><!-- COMEÇO DA SESSÃO 4E -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class="grid_820">
-							
-								<h1>Wellington</h1>
-							
-							</div>
-
-							<div class='grid_820'>
-								
-								<ul class="tabs5">
-									<li><a href="#tab9">Currículo</a></li>
-									<li><a href="#tab10">Trabalhos</a></li>
-								</ul>
-								
-							</div>
-
-							<div class='tab_container'>
-								
-								<div id="tab9" class="tab_content5">
-								
-									<h2>
-										<img class="pic" alt="" src="images/fotos/wellington.jpg" /><span class="information">Wellington Adrieu Cardoso Leite, Estudante, 21 anos<br />Reside em Barueri<br />Telefones: <a href="callto:+5511983861103" target="_blank">11 983861103</a> &nbsp;&nbsp;<a href="callto:+551141633815" target="_blank">11 41633815</a><br />E-mail: <a href="mailto:wellingtonadrieu@hotmail.com" target="_blank">wellingtonadrieu@hotmail.com</a></span>
-									</h2>
-									<h2 class="clean">Habilidades com computador:
-										<ul class="top_list">
-											<li>Adobe Master Collection CS6 (Intermediário)</li>
-											<li>HTML (Intermediário)</li>
-											<li>CSS (Intermediário)</li>
-											<li>Micosoft Office (Básico)</li>
-										</ul>
-										Experi&ecirc;ncia e Educa&ccedil;&atilde;o:
-										<ul class="top_list">
-											<li>2007 a 2008 - Curso de Informática</li>
-											<li>2010 - Conclusão do Ensino Médio</li>
-											<li>Fev. de 2013 a atualmente - Técnico em Informática p/ Internet em ITB Prof.ª Maria Sylvia Chaluppe Mello</li>
-										</ul>
-									</h2>
-								
-								</div>
-								
-								<div id="tab10" class="tab_content5">
-
-									<div class='grid_820'>
-										<p class="work_title"><span class="title1"><a href="http://www.copawell.webege.com" target="_blank">Site Copa das Confedera&ccedil;&otilde;es FIFA Brasil 2013</a></span></p>
-									</div>
-							
-									<div class='grid_260'>
-										<a class="example2" title="Grupos" href="images/portfolio/wellington1.jpg"><img src="images/portfolio/wellington1thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Calendário" href="images/portfolio/wellington2.jpg"><img src="images/portfolio/wellington2thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-									
-									<div class='grid_260'>		
-										<a class="example2" title="Cidade-sedes" href="images/portfolio/wellington3.jpg"><img src="images/portfolio/wellington3thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Seleção Espanhola de Futebol" href="images/portfolio/wellington4.jpg"><img src="images/portfolio/wellington4thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-									<div class='grid_260'>		
-										<a class="example2" title="Seleção Brasileira de Futebol" href="images/portfolio/wellington5.jpg"><img src="images/portfolio/wellington5thumb.jpg" alt="" class="portfolio260" /></a>
-										<a class="example2" title="Home" href="images/portfolio/wellington6.jpg"><img src="images/portfolio/wellington6thumb.jpg" alt="" class="portfolio260" /></a>
-									</div>
-
-								</div>
-							
-							</div>
-						
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 4E -->
-				
-				<div id="section5" class="item"><!-- COMEÇO DA SESSÃO 5 -->
-				
-					<div class="content">
-					
-						<div class="container">
-						
-							<div class="grid_820">
-							
-								<h1>Entre em contato</h1>
-							
-							</div>
-						
-							<div class="clear"></div>
-						   
-							<div class='grid_260'>
-							
-								<h2>Deixe-nos um recado</h2>
-								
-								<div class="message">
-								
-									<div id="alert"></div>
-									
-								</div>
-							   
-							   <form action="sendmail.php" method="post" id="contactForm" class="form">
-									
-									<ul class="contact">
-										<li>
-										<label for="name">Nome :</label>
-										<input id="name" name="name" class="text" size="40" />
-										</li>
-										<li>
-										<label for="email">E-mail :</label>
-										<input id="email" name="email" class="text" size="40" />
-										</li>
-										<li>
-										<label for="message">Mensagem :</label>
-										<textarea id="message" name="message" rows="6" cols="35"></textarea>
-										</li>
-										<li><input type="submit" value="Enviar" id="submit" class="button" /></li>
-										<li><input type="reset" value="Limpar" class="button" /></li>
-									</ul>
-											  
-								</form>
-							
-							</div>
-							
-							<div class='grid_260'>
-							
-								<h2>Informa&ccedil;&otilde;es adicionais</h2>
-								<p>Por sermos uma agência virtual de origem acadêmica, não temos um endereço físico. No entanto, se você não se sente à vontade conversando através de e-mails, você pode entrar em contato pelos respectivos telefones contidos nos portfólios individuais.</p>
-								<p id="mailto"><a href="mailto:contato@agenciaadvanced.herobo.com">contato@agenciaadvanced.herobo.com</a></p>
-							
-							</div>
-							
-							<div class='grid_260'>
-					
-								<h2>Encontre-nos nas redes sociais</h2>
-								<ul class="iconbar">
-								
-									<li><a href="https://www.facebook.com/AgenciaAdvanced" target="_blank"><img src="images/icons/facebook.png" alt="Facebook" /></a></li>
-									<li><a href="https://twitter.com/AgenciaAdvanced" target="_blank"><img src="images/icons/twitter.png" alt="Twitter" /></a></li>
-									
-								</ul>
-								<p>Siga-nos nas redes sociais e fique por dentro de atualizações e novidades!</p>
-							
-							</div>
-							
-							<div class="clear"></div>
-						
-						</div>
-					
-					</div>
-					
-				</div><!-- FIM DA SESSÃO 5 -->
-				
-			</div><!-- FIM DA MÁSCARA -->
-		
-		</div><!-- FIM DA CAPA -->
-		
-		<div id="footer"><!-- COMEÇO DO RODAPÉ -->
-		
-			<div id="footer_box"><!-- COMEÇO DO CONTAINER DO RODAPÉ -->
-			
-				<p>&copy; 2013 Ag&ecirc;ncia Advanced. Todos os direitos reservados.</p>
-
-			</div><!-- FIM DO CONTAINER DO RODAPÉ -->
-		
-		</div><!-- FIM DO RODAPÉ -->
-		
-	</body>
-	
+    $(document).ready(function () {
+        var e = {
+            target: "#alert",
+            beforeSubmit: showRequest,
+            success: showResponse
+        };
+        $("#contactForm").ajaxForm(e)
+    }), $.fn.clearForm = function () {
+        return this.each(function () {
+            var e = this.type,
+                t = this.tagName.toLowerCase();
+            if ("form" == t) return $(":input", this).clearForm();
+            "text" == e || "password" == e || "textarea" == t ? this.value = "" : "checkbox" == e || "radio" == e ? this.checked = !1 : "select" == t && (this.selectedIndex = -1)
+        })
+    }
+</script>
+<div id="header">
+    <div id="header_box">
+        <div id="logo"></div>
+        <ul id="menu">
+            <li><a href="#section1" class="panel">Home</a>
+            <li><a href="#section2" class="panel">About Us</a>
+            <li><a href="#section3" class="panel">Services</a>
+            <li><a href="#" class="panel submenu">Portfolios</a>
+                <ul>
+                    <li><a href="#section4a" class="panel">Julio</a>
+                    <li><a href="#section4b" class="panel">Samuel</a>
+                    <li><a href="#section4c" class="panel">Vantuir</a>
+                    <li><a href="#section4d" class="panel">Weber</a>
+                    <li><a href="#section4e" class="panel">Wellington</a>
+                </ul>
+            <li><a href="#section5" class="panel">Contact</a>
+        </ul>
+    </div>
+</div>
+<div id="wrapper">
+    <div id="mask">
+        <div class="item" id="section1">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820">
+                        <h1>Hello, we are Advanced Agency. Welcome to our website!</h1><img alt=""
+                                                                                            src="images/fotos/fotos.png">
+                        <h1>Let's <a href="#section2" class="panel">advance</a>!</h1>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section2">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820">
+                        <h1>About Us</h1>
+                        <h2>Founded in April 2013 with an academic purpose, our agency consists of five students from
+                            the Internet Computing course at Barueri Technical Institute.</h2>
+                        <h2>We specialize in website creation. We enjoy creating unique, complete, and appropriate sites
+                            of all shapes and sizes.</h2>
+                        <h2>Here on the site, you can find some of our <a href="#section3" class="panel">services</a> as
+                            a group and our respective portfolios with information and individual work.</h2>
+                        <h2>Did you like our work? <a href="#section5" class="panel">Contact us</a> to discuss your
+                            projects.</h2>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section3">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820">
+                        <h1>Services</h1>
+                        <h2>Below are links and some images of our academic sites as a group:</h2>
+                        <p class="work_title"><span class="title_left"><a href="http://www.hometheaterphilips.net76.net"
+                                                                          target="_blank">Hotsite Home Theater Philips</a></span><span
+                                class="title_right"><a href="http://www.marcenariaeskalla.com.br" target="_blank">Marcenaria Eskalla Site</a></span>
+                        </p>
+                    </div>
+                    <div class="grid_260" id="hotsite">
+                        <a href="images/portfolio/hotsite1.jpg" class="example2" title="Home"><img
+                                alt="Home Theater Philips - Page 1" src="images/portfolio/hotsite1thumb.jpg"
+                                class="portfolio260"></a>
+                        <a href="images/portfolio/hotsite2.jpg" class="example2" title="Animation"><img
+                                alt="Home Theater Philips - Page 2" src="images/portfolio/hotsite2thumb.jpg"
+                                class="portfolio260"></a>
+                    </div>
+                    <div class="grid_260" id="marcenaria">
+                        <a href="images/portfolio/eskalla1.jpg" class="example2" title="Home"><img alt=""
+                                                                                                   src="images/portfolio/eskalla1thumb.jpg"
+                                                                                                   class="portfolio260"></a>
+                        <a href="images/portfolio/eskalla2.jpg" class="example2" title="About Us"><img alt=""
+                                                                                                       src="images/portfolio/eskalla2thumb.jpg"
+                                                                                                       class="portfolio260"></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section4a">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820">
+                        <h1>Julio</h1>
+                    </div>
+                    <div class="grid_820">
+                        <ul class="tabs1">
+                            <li><a href="#tab1">Resume</a></li>
+                            <li><a href="#tab2">Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_container">
+                        <div class="tab_content1" id="tab1">
+                            <h2>
+                                <img alt="" src="images/fotos/julio.jpg" class="pic">
+                                <span class="information">Julio Rodrigues Caetano, Student, 16 years old<br>Resides in Pirapora do Bom Jesus<br>Phone: <a
+                                        href="callto:+551141315418">11 41315418</a><br>Email: <a
+                                        href="mailto:julio_caetano01@hotmail.com">julio_caetano01@hotmail.com</a></span>
+                            </h2>
+                            <h2 class="clean">Computer Skills:
+                                <ul class="top_list">
+                                    <li>Adobe Master Collection CS6 (Intermediate)</li>
+                                    <li>HTML (Intermediate)</li>
+                                    <li>CSS (Intermediate)</li>
+                                    <li>Programming Logic applied in C# (Intermediate)</li>
+                                </ul>
+                                Experience and Education:
+                                <ul class="top_list">
+                                    <li>Attending 3rd year of high school</li>
+                                    <li>Feb. 2013 to present - Technical in Internet Computing at ITB Prof.ª Maria
+                                        Sylvia Chaluppe Mello
+                                    </li>
+                                </ul>
+                            </h2>
+                        </div>
+                        <div class="tab_content1" id="tab2">
+                            <div class="grid_820">
+                                <p class="work_title"><span class="title1"><a href="#" target="_blank">Website Confederations Cup FIFA Brazil 2013</a></span>
+                                </p>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/julio1.jpg" class="example2" title="Stadiums"><img alt=""
+                                                                                                             src="images/portfolio/julio1thumb.jpg"
+                                                                                                             class="portfolio260"></a>
+                                <a href="images/portfolio/julio2.jpg" class="example2" title="Teams"><img alt=""
+                                                                                                          src="images/portfolio/julio2thumb.jpg"
+                                                                                                          class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/julio3.jpg" class="example2" title="Host Cities"><img alt=""
+                                                                                                                src="images/portfolio/julio3thumb.jpg"
+                                                                                                                class="portfolio260"></a>
+                                <a href="images/portfolio/julio4.jpg" class="example2" title="Groups"><img alt=""
+                                                                                                           src="images/portfolio/julio4thumb.jpg"
+                                                                                                           class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/julio5.jpg" class="example2" title="Belo Horizonte"><img
+                                        alt="" src="images/portfolio/julio5thumb.jpg" class="portfolio260"></a>
+                                <a href="images/portfolio/julio6.jpg" class="example2" title="Mineirão"><img alt=""
+                                                                                                             src="images/portfolio/julio6thumb.jpg"
+                                                                                                             class="portfolio260"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section4b">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820">
+                        <h1>Samuel</h1>
+                    </div>
+                    <div class="grid_820">
+                        <ul class="tabs2">
+                            <li><a href="#tab3">Resume</a></li>
+                            <li><a href="#tab4">Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_container">
+                        <div class="tab_content2" id="tab3">
+                            <h2>
+                                <img alt="" src="images/fotos/samuel.jpg" class="pic">
+                                <span class="information">Samuel Giordano Bortolatto Britto, Student, 18 years old<br>Resides in Itapevi<br>Phone: <a
+                                        href="callto:+551138690211">11 3869-0211</a><br>Email: <a
+                                        href="mailto:samuelgiordano@live.com">samuelgiordano@live.com</a></span>
+                            </h2>
+                            <h2 class="clean">Computer Skills:
+                                <ul class="top_list">
+                                    <li>Adobe Master Collection CS6 (Intermediate)</li>
+                                    <li>HTML (Intermediate)</li>
+                                    <li>CSS (Intermediate)</li>
+                                    <li>Programming Logic applied in C# (Intermediate)</li>
+                                    <li>Microsoft Office (Intermediate)</li>
+                                </ul>
+                                Experience and Education:
+                                <ul class="top_list">
+                                    <li>2007 to 2011 - Digital Designer at Britto Carrera Photo & Video</li>
+                                    <li>2012 - High School Graduation</li>
+                                    <li>Feb. 2013 to present - Technical in Internet Computing at ITB Prof.ª Maria
+                                        Sylvia Chaluppe Mello
+                                    </li>
+                                </ul>
+                            </h2>
+                        </div>
+                        <div class="tab_content2" id="tab4">
+                            <div class="grid_820">
+                                <p class="work_title"><span class="title1"><a
+                                        href="http://www.confederationscup.hostei.com" target="_blank">Website Confederations Cup FIFA Brazil 2013</a></span>
+                                </p>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/samuel1.jpg" class="example2" title="Home"><img alt=""
+                                                                                                          src="images/portfolio/samuel1thumb.jpg"
+                                                                                                          class="portfolio260"></a>
+                                <a href="images/portfolio/samuel2.jpg" class="example2"
+                                   title="Brazilian National Football Team"><img alt=""
+                                                                                 src="images/portfolio/samuel2thumb.jpg"
+                                                                                 class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/samuel3.jpg" class="example2" title="Groups"><img alt=""
+                                                                                                            src="images/portfolio/samuel3thumb.jpg"
+                                                                                                            class="portfolio260"></a>
+                                <a href="images/portfolio/samuel4.jpg" class="example2" title="Host Cities"><img alt=""
+                                                                                                                 src="images/portfolio/samuel4thumb.jpg"
+                                                                                                                 class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/samuel5.jpg" class="example2" title="Brasília"><img alt=""
+                                                                                                              src="images/portfolio/samuel5thumb.jpg"
+                                                                                                              class="portfolio260"></a>
+                                <a href="images/portfolio/samuel6.jpg" class="example2" title="Maracanã"><img alt=""
+                                                                                                              src=images/portfolio/samuel6thumb.jpg
+                                                                                                              class=portfolio260></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section4c">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820"><h1>Vantuir</h1></div>
+                    <div class="grid_820">
+                        <ul class="tabs3">
+                            <li><a href="#tab5">Resume</a></li>
+                            <li><a href="#tab6">Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_container">
+                        <div class="tab_content3" id="tab5"><h2><img alt="" src="images/fotos/vantuir.jpg"
+                                                                     class="pic"><span
+                                class="information">Vantuir Alves Calado, Administrative Assistant, 30 years old<br>Resides in Jandira<br>Phones: <a
+                                href="callto:+5511996008140">11 996008140</a>   <a href="callto:+551147074588">11 47074588</a><br>Email: <a
+                                href="mailto:vantuirdesigner@gmail.com">vantuirdesigner@gmail.com</a></span></h2>
+                            <h2 class="clean">Computer Skills:
+                                <ul class="top_list">
+                                    <li>Adobe Master Collection CS6 (Intermediate)</li>
+                                    <li>HTML (Intermediate)</li>
+                                    <li>CSS (Intermediate)</li>
+                                    <li>Microsoft Office (Intermediate)</li>
+                                </ul>
+                                Experience and Education:
+                                <ul class="top_list">
+                                    <li>2005 - PC Assembly and Maintenance</li>
+                                    <li>Feb. 2013 to present - Technical in Internet Computing at ITB Prof.ª Maria
+                                        Sylvia Chaluppe Mello
+                                    </li>
+                                </ul>
+                            </h2>
+                        </div>
+                        <div class="tab_content3" id="tab6">
+                            <div class="grid_820"><p class="work_title"><span class="title_left_van"><a
+                                    href="http://www.copaconfederacoes.p.ht" target="_blank">Website Confederations Cup FIFA Brazil 2013</a></span><span
+                                    class="title_right_van"><a href="http://www.picollypizzaseesfihas.com.br"
+                                                               target="_blank">Picolly Pizzeria Website</a></span></p>
+                            </div>
+                            <div class="grid_260"><a href="images/portfolio/vantuir1.jpg" class="example2" title="Home"><img
+                                    alt=""
+                                    src="images/portfolio/vantuir1thumb.jpg"
+                                    class="portfolio260"></a><a
+                                    href="images/portfolio/vantuir2.jpg" class="example2"
+                                    title="Brazilian National Football Team"><img
+                                    alt="" src="images/portfolio/vantuir2thumb.jpg" class="portfolio260"></a></div>
+                            <div class="grid_260"><a href="images/portfolio/vantuir3.jpg" class="example2" title="Home"><img
+                                    alt=""
+                                    src="images/portfolio/vantuir3thumb.jpg"
+                                    class="portfolio260"></a><a
+                                    href="images/portfolio/vantuir4.jpg" class="example2" title="The House"><img alt=""
+                                                                                                                 src="images/portfolio/vantuir4thumb.jpg"
+                                                                                                                 class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260"><a href="images/portfolio/vantuir5.jpg" class="example2"
+                                                     title="Contact"><img alt=""
+                                                                          src="images/portfolio/vantuir5thumb.jpg"
+                                                                          class="portfolio260"></a><a
+                                    href="images/portfolio/vantuir6.jpg" class="example2" title="Menu"><img alt=""
+                                                                                                            src="images/portfolio/vantuir6thumb.jpg"
+                                                                                                            class="portfolio260"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section4d">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820"><h1>Weber</h1></div>
+                    <div class="grid_820">
+                        <ul class="tabs4">
+                            <li><a href="#tab7">Resume</a></li>
+                            <li><a href="#tab8">Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_container">
+                        <div class="tab_content4" id="tab7"><h2><img alt="" src="images/fotos/weber.jpg"
+                                                                     class="pic"><span
+                                class="information">Weber Alex Cardoso Leite, Student, 16 years old<br>Resides in Barueri<br>Phones: <a
+                                href="callto:+5511949018485" target="_blank">11 949018485</a>   <a
+                                href="callto:+551141633815"
+                                target="_blank">11 41633815</a><br>Email: <a
+                                href="mailto:wbrale@hotmail.com" target="_blank">wbrale@hotmail.com</a></span></h2>
+                            <h2 class="clean">Computer Skills:
+                                <ul class="top_list">
+                                    <li>Adobe Master Collection CS6 (Basic)</li>
+                                    <li>HTML (Basic)</li>
+                                    <li>CSS (Basic)</li>
+                                </ul>
+                                Experience and Education:
+                                <ul class="top_list">
+                                    <li>Attending 2nd year of high school</li>
+                                    <li>Feb. 2013 to present - Technical in Internet Computing at ITB Prof.ª Maria
+                                        Sylvia Chaluppe Mello
+                                    </li>
+                                </ul>
+                            </h2>
+                        </div>
+                        <div class="tab_content4" id="tab8">
+                            <div class="grid_820"><p class="work_title"><span class="title1"><a
+                                    href="http://www.copadasconfederacao2013.netau.net" target="_blank">Website Confederations Cup FIFA Brazil 2013</a></span>
+                            </p>
+                            </div>
+                            <div class="grid_260"><a href="images/portfolio/weber1.jpg" class="example2"
+                                                     title="Second Stage"><img
+                                    alt="" src="images/portfolio/weber1thumb.jpg" class="portfolio260"></a><a
+                                    href="images/portfolio/weber2.jpg" class="example2" title="Groups"><img alt=""
+                                                                                                            src="images/portfolio/weber2thumb.jpg"
+                                                                                                            class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260"><a href="images/portfolio/weber3.jpg" class="example2"
+                                                     title="Spanish National Football Team"><img alt=""
+                                                                                                 src="images/portfolio/weber3thumb.jpg"
+                                                                                                 class="portfolio260"></a><a
+                                    href="images/portfolio/weber4.jpg" class="example2" title="Teams"><img alt=""
+                                                                                                           src="images/portfolio/weber4thumb.jpg"
+                                                                                                           class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260"><a href="images/portfolio/weber5.jpg" class="example2"
+                                                     title="Host Cities"><img
+                                    alt="" src="images/portfolio/weber5thumb.jpg" class="portfolio260"></a><a
+                                    href="images/portfolio/weber6.jpg" class="example2" title="Host Country"><img alt=""
+                                                                                                                  src="images/portfolio/weber6thumb.jpg"
+                                                                                                                  class="portfolio260"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section4e">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820"><h1>Wellington</h1></div>
+                    <div class="grid_820">
+                        <ul class="tabs5">
+                            <li><a href="#tab9">Resume</a></li>
+                            <li><a href="#tab10">Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_container">
+                        <div class="tab_content5" id="tab9">
+                            <h2>
+                                <img alt="" src="images/fotos/wellington.jpg" class="pic">
+                                <span class="information">Wellington Adrieu Cardoso Leite, Student, 21 years old<br>Resides in Barueri<br>Phones: <a
+                                        href="callto:+5511983861103" target="_blank">11 983861103</a>   <a
+                                        href="callto:+551141633815" target="_blank">11 41633815</a><br>Email: <a
+                                        href="mailto:wellingtonadrieu@hotmail.com" target="_blank">wellingtonadrieu@hotmail.com</a></span>
+                            </h2>
+                            <h2 class="clean">Computer Skills:
+                                <ul class="top_list">
+                                    <li>Adobe Master Collection CS6 (Intermediate)</li>
+                                    <li>HTML (Intermediate)</li>
+                                    <li>CSS (Intermediate)</li>
+                                    <li>Microsoft Office (Basic)</li>
+                                </ul>
+                                Experience and Education:
+                                <ul class="top_list">
+                                    <li>2007 to 2008 - Computer Course</li>
+                                    <li>2010 - High School Graduation</li>
+                                    <li>Feb. 2013 to present - Technical in Internet Computing at ITB Prof.ª Maria
+                                        Sylvia Chaluppe Mello
+                                    </li>
+                                </ul>
+                            </h2>
+                        </div>
+                        <div class="tab_content5" id="tab10">
+                            <div class="grid_820"><p class="work_title"><span class="title1"><a
+                                    href="http://www.copawell.webege.com" target="_blank">Website Confederations Cup FIFA Brazil 2013</a></span>
+                            </p></div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/wellington1.jpg" class="example2" title="Groups"><img alt=""
+                                                                                                                src="images/portfolio/wellington1thumb.jpg"
+                                                                                                                class="portfolio260"></a>
+                                <a href="images/portfolio/wellington2.jpg" class="example2" title="Calendar"><img alt=""
+                                                                                                                  src="images/portfolio/wellington2thumb.jpg"
+                                                                                                                  class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/wellington3.jpg" class="example2" title="Host Cities"><img
+                                        alt="" src="images/portfolio/wellington3thumb.jpg" class="portfolio260"></a>
+                                <a href="images/portfolio/wellington4.jpg" class="example2"
+                                   title="Spanish National Football Team"><img alt=""
+                                                                               src="images/portfolio/wellington4thumb.jpg"
+                                                                               class="portfolio260"></a>
+                            </div>
+                            <div class="grid_260">
+                                <a href="images/portfolio/wellington5.jpg" class="example2"
+                                   title="Brazilian National Football Team"><img alt=""
+                                                                                 src="images/portfolio/wellington5thumb.jpg"
+                                                                                 class="portfolio260"></a>
+                                <a href="images/portfolio/wellington6.jpg" class="example2" title="Home"><img alt=""
+                                                                                                              src="images/portfolio/wellington6thumb.jpg"
+                                                                                                              class="portfolio260"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="item" id="section5">
+            <div class="content">
+                <div class="container">
+                    <div class="grid_820"><h1>Contact Us</h1></div>
+                    <div class="clear"></div>
+                    <div class="grid_260"><h2>Leave us a message</h2>
+                        <div class="message">
+                            <div id="alert"></div>
+                        </div>
+                        <form action="sendmail.php" class="form" id="contactForm" method="post">
+                            <ul class="contact">
+                                <li><label for="name">Name :</label> <input class="text" id="name" name="name"
+                                                                            size="40"></li>
+                                <li><label for="email">Email :</label> <input class="text" id="email" name="email"
+                                                                              size="40"></li>
+                                <li><label for="message">Message :</label> <textarea cols="35" id="message"
+                                                                                     name="message" rows="6"></textarea>
+                                </li>
+                                <li><input class="button" id="submit" type="submit" value="Send"></li>
+                                <li><input class="button" type="reset" value="Clear"></li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="grid_260"><h2>Additional Information</h2>
+                        <p>As we are a virtual agency with an academic origin, we do not have a physical address.
+                            However, if you are not comfortable communicating through emails, you can contact us through
+                            the respective phone numbers in the individual portfolios.</p>
+                        <p id="mailto"><a href="mailto:contato@agenciaadvanced.herobo.com">contato@agenciaadvanced.herobo.com</a>
+                        </p>
+                    </div>
+                    <div class="grid_260"><h2>Find us on social networks</h2>
+                        <ul class="iconbar">
+                            <li><a href="https://www.facebook.com/AgenciaAdvanced" target="_blank"><img alt="Facebook"
+                                                                                                        src="images/icons/facebook.png"></a>
+                            </li>
+                            <li><a href="https://twitter.com/AgenciaAdvanced" target="_blank"><img alt="Twitter"
+                                                                                                   src="images/icons/twitter.png"></a>
+                            </li>
+                        </ul>
+                        <p>Follow us on social networks to stay updated and informed about new developments!</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="footer_box"><p>© 2013 Advanced Agency. All rights reserved.</p></div>
+</div>
+</body>
 </html>
