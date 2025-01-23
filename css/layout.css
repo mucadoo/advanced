@@ -1,0 +1,627 @@
+/*  _______________________________________
+
+	01 CONTAINERS
+    _______________________________________  */
+	
+html{
+	overflow:hidden;
+}
+body{
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	font-family:"Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+	color:#DDD;
+	background:url("../images/background.gif");
+}
+#wrapper{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+}
+#mask{
+	width:2000%;
+	height:2000%;
+}
+.item{
+	width:5%; 
+	height:5%; 
+	float:left;
+}
+.content{
+	width:100%; 
+	height:100%; 
+	margin:0 auto; 
+	position:relative;
+}
+/*  _______________________________________
+
+	02 GRIDS
+    _______________________________________  */
+	
+.container{
+	width:860px;
+	height:450px;
+	margin:120px auto;
+	position:relative;
+}
+.grid_260, .grid_540, .grid_820{
+	display:inline;
+	float:left;
+	position:relative;
+	margin-left:20px;
+}
+.container .grid_260{
+	width:260px;
+}
+.container .grid_540{
+	width:540px;
+}
+.container .grid_820{
+	width:820px;
+}
+.clear{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+}
+
+/*  _______________________________________
+
+	03 PAINEL DE ROLAGEM (ROLADORES INTERNOS)
+    _______________________________________  */
+
+.scroll-pane {
+	height:380px;
+}
+.jspContainer{
+	overflow:hidden;
+	position:relative;
+}
+.jspPane{
+	position:absolute;
+}
+.jspVerticalBar{
+	position:absolute;
+	top:0;
+	right:0;
+	width:10px;
+	height:100%;
+}
+.jspVerticalBar *{
+	margin:0;
+	padding:0;
+}
+.jspCap{
+	display:none;
+}
+.jspTrack{
+	background:#DDD;
+	position:relative;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+.jspDrag{
+	background:#333 url("../images/icons/drag.png") no-repeat 50% 50%;
+	position:relative;
+	top:0;
+	left:0;
+	cursor:pointer;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+/*  _______________________________________
+
+	04 CABEÇALHO E MENU
+    _______________________________________  */
+	
+/* 1. Cabeçalho */
+
+#header {
+	width:100%;
+	height:150px;
+	margin:0;
+	padding:0;
+	position:fixed;
+	z-index:999;
+}
+#header_box {
+	width: 820px;
+	margin:0px auto;
+	position: relative;
+	padding:0px 10px 0px 10px;
+}
+#logo {
+	background:url("../images/logo.png");
+	width:222px;
+	height:95px;
+}
+
+/* 2. Menu */
+
+#menu {
+	background:none;
+	margin:-5px 0 0 -40px;
+	list-style:none;
+}
+#menu li {
+	list-style:none;
+	float:left;
+	padding-bottom:8px;
+}
+#menu li a {
+	color:#2076E1;
+	text-decoration:none;
+	margin-right:40px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	position:relative;
+	z-index:888;
+	padding-bottom:8px;
+}
+#menu li a:hover, #menu li a.active {
+	color:#DDD;
+	background:url("../images/icons/menu_hover.png") no-repeat center 15px;
+}
+#menu li a.submenu {
+	background:url("../images/icons/submenu.png") no-repeat center 15px;
+}
+#menu .submenu:hover, #menu .submenu.active {
+	background:url("../images/icons/submenu_hover.png") no-repeat center 15px;
+}
+
+/* 3. Submenus */
+
+#menu li ul {
+   display: none;
+}
+#menu li:hover ul, #menu li.hover ul {
+   position: absolute;
+   display: inline;
+   top:80px;
+   left:200px;
+   width:100%;
+   margin:0px 10px;
+   padding: 40px 0;
+}
+#menu li:hover li a, #menu li.hover li a {
+   color:#2076E1;
+   font-size:12px;
+   margin-right:20px;
+   background:url("../images/icons/bullet_menu.png") no-repeat left top;
+   padding-left:15px;
+}
+#menu li li a:hover {
+   color:#DDD;
+   background:url("../images/icons/bullet_menu_hover.png") no-repeat left top;
+}
+	
+/*  _______________________________________
+
+	05 IMAGENS
+    _______________________________________  */
+
+.portfolio260{
+	height:125px;
+	width:260px;
+	margin-bottom:20px;
+	display:inline;
+	float:left;
+	position:relative;
+	border:#2B2B2B solid 1px;
+}
+.iconbar{
+	float:left;
+	list-style:none;
+	margin-bottom:20px;
+	position:relative;
+	width:260px;
+}
+.iconbar li{
+	width:48px;
+	height:48px;
+	margin-right:10px;
+	float:left;
+	position:relative;
+}
+
+/*  _______________________________________
+
+	06 TIPOGRAFIA
+    _______________________________________  */
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin-bottom:15px;
+	padding:0;
+	color:#DDD;
+}
+
+p {	
+	font-size:15px;
+	padding:0;
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:Arial, Helvetica, sans-serif;
+}
+h1 {
+	font-weight:bold;
+	font-size:26px;
+	color:#DDD;
+	line-height:36px;
+	margin-bottom:24px;
+}
+h2 {
+	font-weight:bold;
+	font-size:18px;
+	color:#DDD;
+	margin-bottom:15px;
+}
+.black {
+	font-weight:bold;
+}
+a {
+	color:#2076E1;
+	text-decoration:none;
+	font-weight:bold;
+}
+	a:hover {
+		text-decoration:underline;
+	}
+	h1 a:hover {
+		text-decoration:none;
+	}
+.list {
+	font-size: 11px;
+	font-weight:bold;
+	line-height:18px;
+	margin:0 0 15px 15px;
+}
+.list li {
+	text-indent: 0px;
+}
+#mailto {
+	margin-top:25px;
+	margin-left:110px;
+	font-size:18px;
+}
+.work_title{
+	margin-top:-6px;
+}
+.title1{
+	margin-left:275px;
+}
+.title_left{
+	margin-left:120px;
+}
+.title_left_van{
+	margin-left:0;
+}
+.title_right{
+	margin-left:200px;
+}
+.title_right_van{
+	margin-left:220px;
+}
+.pic{
+	float:left;
+}
+.information{
+	margin-left:10px;
+	float:left;
+}
+.clean{
+	padding-top:10px;
+	clear:both;
+}
+.top_list{
+	margin-top:0;
+}
+#hotsite{
+	margin-left:105px;
+}
+#marcenaria{
+	margin-left:105px;
+}
+/*  _______________________________________
+
+	07 TABS
+    _______________________________________  */
+
+ul.tabs1{
+	margin:0px 0px 10px 0px;
+	padding:0;
+	float:left;
+	list-style:none;
+	height:32px;
+	width:100%;
+}
+ul.tabs2{
+	margin:0px 0px 10px 0px;
+	padding:0;
+	float:left;
+	list-style:none;
+	height:32px;
+	width:100%;
+}
+ul.tabs3{
+	margin:0px 0px 10px 0px;
+	padding:0;
+	float:left;
+	list-style:none;
+	height:32px;
+	width:100%;
+}
+ul.tabs4{
+	margin:0px 0px 10px 0px;
+	padding:0;
+	float:left;
+	list-style:none;
+	height:32px;
+	width:100%;
+}
+ul.tabs5{
+	margin:0px 0px 10px 0px;
+	padding:0;
+	float:left;
+	list-style:none;
+	height:32px;
+	width:100%;
+}
+ul.tabs1 li{
+	float:left;
+	margin:0px 20px 0px 0px;
+	padding:0;
+	overflow:hidden;
+	position:relative;
+}
+ul.tabs2 li{
+	float:left;
+	margin:0px 20px 0px 0px;
+	padding:0;
+	overflow:hidden;
+	position:relative;
+}
+ul.tabs3 li{
+	float:left;
+	margin:0px 20px 0px 0px;
+	padding:0;
+	overflow:hidden;
+	position:relative;
+}
+ul.tabs4 li{
+	float:left;
+	margin:0px 20px 0px 0px;
+	padding:0;
+	overflow:hidden;
+	position:relative;
+}
+ul.tabs5 li{
+	float:left;
+	margin:0px 20px 0px 0px;
+	padding:0;
+	overflow:hidden;
+	position:relative;
+}
+ul.tabs1 li a{
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:16px;
+	text-decoration:none;
+	color:#2076E1;
+	display:block;
+	padding:5px 5px 10px 5px;
+	outline:none;
+}
+ul.tabs2 li a{
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:16px;
+	text-decoration:none;
+	color:#2076E1;
+	display:block;
+	padding:5px 5px 10px 5px;
+	outline:none;
+}
+ul.tabs3 li a{
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:16px;
+	text-decoration:none;
+	color:#2076E1;
+	display:block;
+	padding:5px 5px 10px 5px;
+	outline:none;
+}
+ul.tabs4 li a{
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:16px;
+	text-decoration:none;
+	color:#2076E1;
+	display:block;
+	padding:5px 5px 10px 5px;
+	outline:none;
+}
+ul.tabs5 li a{
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:16px;
+	text-decoration:none;
+	color:#2076E1;
+	display:block;
+	padding:5px 5px 10px 5px;
+	outline:none;
+}
+ul.tabs1 li a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+	text-decoration:none;
+}
+ul.tabs2 li a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+	text-decoration:none;
+}
+ul.tabs3 li a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+	text-decoration:none;
+}
+ul.tabs4 li a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+	text-decoration:none;
+}
+ul.tabs5 li a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+	text-decoration:none;
+}
+html ul.tabs1 li.current a, html ul.tabs1 li.current a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+}
+html ul.tabs2 li.current a, html ul.tabs2 li.current a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+}
+html ul.tabs3 li.current a, html ul.tabs3 li.current a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+}
+html ul.tabs4 li.current a, html ul.tabs4 li.current a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+}
+html ul.tabs5 li.current a, html ul.tabs5 li.current a:hover{
+	background:url("../images/icons/tabs_hover.png") no-repeat center bottom;
+	color:#2B2B2B;
+}
+.tab_content1, .tab_content2, .tab_content3, .tab_content4, .tab_content5{
+	padding:0px;
+}
+.tab_container{
+	overflow:hidden;
+	clear:both;
+	float:left;
+	width:100%;
+}
+#tab1, #tab3, #tab5, #tab7, #tab9{
+	margin-left:20px;
+}
+
+/*  _______________________________________
+
+	08 FORMULÁRIO DE CONTATO
+    _______________________________________  */
+
+.form{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:14px;
+}
+.form label{
+	font-weight:bold;
+	padding:0;
+	margin:0;
+}
+.form ul li{
+	list-style:none;
+	display:inline;
+}
+#name, #email, #message{
+	width:260px;
+	padding:0 3px 0 3px;
+	border:none;
+	margin:5px 0 5px 0;
+	background-color:#DDD;
+	border:gray solid 1px;
+	font-size:12px
+}
+#name, #email{
+	height:20px;
+}
+#message{
+	font-family:"Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+	height:75px;
+	overflow:auto;
+}
+.button{
+	font-size:11px;
+	background:#DDD;
+	border:gray solid 1px;
+	margin:5px 15px 0px 0px;
+	float:left;
+	height:22px;
+	width:70px;
+}
+.button:hover{
+	font-weight:bold;
+	color:#2076E1;
+	border:#2076E1 solid 1px;
+}
+.message{
+	display:none;
+	width:260px;
+	float:left;
+	margin-bottom:5px;
+}
+#alert li{
+	width:auto;
+	float:left;
+	list-style:none;
+}
+.error{
+	font-size:11px;
+	color:#ED4340
+}
+.sent{
+	font-size:11px;
+	color:#75A133
+}
+.contact{
+	margin-left:-40px;
+	position:relative
+}
+.contact ul{
+	list-style-type:none
+}
+.contact li.special{
+	display:none
+}
+
+/*  _______________________________________
+
+	09 RODAPÉ
+    _______________________________________  */
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	border-top:#999 solid 1px;
+	border-bottom:#999 solid 1px;
+	width: 100%;
+	height:30px;
+	padding-top:10px;
+}
+#footer_box {
+	width: 820px;
+	height:30px;
+	margin:-14px auto;
+	position: relative;
+	padding:0px 10px 0px 10px;
+}
+#footer p{
+font-size:14px;
+}
