@@ -1,49 +1,52 @@
 <!doctype html>
-<html lang="en">
-<meta charset="UTF-8">
-<meta content="Web Design Agency specialized in Website Creation" name="description">
-<meta content="creation, sites, site, agency, advanced, advance, web, design" name="keywords">
-<meta content="Samuel Giordano (samuelgiordano@live.com)" name="author">
-<title>Advanced Agency</title>
-<link href="images/icons/icon.ico" rel="icon" type="image/icon">
-<link href="css/layout.css" rel="stylesheet">
-<link href="css/imagebox.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
-<script src="js/scroll_to.js"></script>
-<script src="js/scroller.js"></script>
-<script src="js/scrollpane.js"></script>
-<script src="js/imagebox.js"></script>
-<script src="js/cufon.js"></script>
-<script src="js/delicious_font.js"></script>
-<script>
-    Cufon.replace("h1, h2, p, label")
-</script>
-<script src="js/form.js"></script>
-<script>
-    function showRequest(e, t, s) {
-        $.param(e);
-        return !0
-    }
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Web Design Agency specialized in Website Creation" name="description">
+    <meta content="creation, sites, site, agency, advanced, advance, web, design" name="keywords">
+    <meta content="Samuel Giordano (samuelgiordano@live.com)" name="author">
+    <title>Advanced Agency</title>
+    <link href="images/icons/icon.ico" rel="icon" type="image/icon">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/imagebox.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/scroll_to.js"></script>
+    <script src="js/scroller.js"></script>
+    <script src="js/scrollpane.js"></script>
+    <script src="js/imagebox.js"></script>
+    <script src="js/cufon.js"></script>
+    <script src="js/delicious_font.js"></script>
+    <script>
+        Cufon.replace("h1, h2, p, label")
+    </script>
+    <script src="js/form.js"></script>
+    <script>
+        function showRequest(e, t, s) {
+            $.param(e);
+            return !0
+        }
 
-    function showResponse(e, t) {
-    }
+        function showResponse(e, t) {
+        }
 
-    $(document).ready(function () {
-        var e = {
-            target: "#alert",
-            beforeSubmit: showRequest,
-            success: showResponse
-        };
-        $("#contactForm").ajaxForm(e)
-    }), $.fn.clearForm = function () {
-        return this.each(function () {
-            var e = this.type,
-                t = this.tagName.toLowerCase();
-            if ("form" == t) return $(":input", this).clearForm();
-            "text" == e || "password" == e || "textarea" == t ? this.value = "" : "checkbox" == e || "radio" == e ? this.checked = !1 : "select" == t && (this.selectedIndex = -1)
-        })
-    }
-</script>
+        $(document).ready(function () {
+            var e = {
+                target: "#alert",
+                beforeSubmit: showRequest,
+                success: showResponse
+            };
+            $("#contactForm").ajaxForm(e)
+        }), $.fn.clearForm = function () {
+            return this.each(function () {
+                var e = this.type,
+                    t = this.tagName.toLowerCase();
+                if ("form" == t) return $(":input", this).clearForm();
+                "text" == e || "password" == e || "textarea" == t ? this.value = "" : "checkbox" == e || "radio" == e ? this.checked = !1 : "select" == t && (this.selectedIndex = -1)
+            })
+        }
+    </script>
+</head>
+<body>
 <div id="header">
     <div id="header_box">
         <div id="logo"></div>
